@@ -3,9 +3,6 @@
 #include <string.h>
 #include <functions.h>
 
-#define MAX_STUDENTS 100
-#define FILENAME "marks.txt" // File name to store marks
-
 typedef struct {
     char name[50];
     float marks_physics[3];
