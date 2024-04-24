@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <functions.c>
+#include <functions.h>
 
 #define MAX_STUDENTS 100
 #define FILENAME "marks.txt" // File name to store marks
