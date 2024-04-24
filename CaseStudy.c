@@ -3,13 +3,6 @@
 #include <string.h>
 #include <functions.h>
 
-typedef struct {
-    char name[50];
-    float marks_physics[3];
-    float marks_chemistry[3];
-    float marks_maths[3];
-} Student;
-
 // Function prototypes
 void addMarks(Student students[], int *count);
 void updateMarks(Student students[], int count);
