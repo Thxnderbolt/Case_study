@@ -125,3 +125,14 @@ void saveMarksToFile(Student students[], int count) {
         printf("Error opening file for writing.\n");
         return;
     }
+
+    // Write each student's details to the file
+    for (int i = 0; i < count; i++) {
+        fprintf(file, "%s %.2f %.2f %.2f %.2f %.2f %.2f %.2f %.2f %.2f\n", students[i].name,
+                students[i].marks_physics[0], students[i].marks_physics[1], students[i].marks_physics[2],
+                students[i].marks_chemistry[0], students[i].marks_chemistry[1], students[i].marks_chemistry[2],
+                students[i].marks_maths[0], students[i].marks_maths[1], students[i].marks_maths[2]);
+    }
+
+    fclose(file);
+}
