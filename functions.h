@@ -17,5 +17,6 @@ void deleteMarks(Student students[], int *count);
 void displayMarks(Student students[], int count);
 char calculateGrade(float percentage);
 void saveMarksToFile(Student students[], int count);
+void searchStudent(Student students[], int count, char name[]);
 
 #endif
