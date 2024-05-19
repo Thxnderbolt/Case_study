@@ -137,3 +137,27 @@ void saveMarksToFile(Student students[], int count) {
 
     fclose(file);
 }
+
+void searchStudent(Student students[], int count, char name[]) {
+    int i;
+    for (i = 0; i < count; i++) {
+        float total_percentage = 0;
+        if (strcmp(name, students[i].name) == 0) {
+            printf("\nStudent Details:\n");
+            printf("Name: %s\n", students[i].name);
+            printf("Physics Marks: %.2f %.2f %.2f\n", students[i].marks_physics[0], students[i].marks_physics[1], students[i].marks_physics[2]);
+            printf("Chemistry Marks: %.2f %.2f %.2f\n", students[i].marks_chemistry[0], students[i].marks_chemistry[1], students[i].marks_chemistry[2]);
+            printf("Maths Marks: %.2f %.2f %.2f\n", students[i].marks_maths[0], students[i].marks_maths[1], students[i].marks_maths[2]);
+            for (int j = 0; j < 3; j++) {
+                float total_marks_subject = students[i].marks_physics[j] + students[i].marks_chemistry[j] + students[i].marks_maths[j];
+                float percentage = (total_marks_subject / 180) * 100;
+                total_percentage += percentage;
+            }
+            float average_percentage = total_percentage / 3;
+            printf("Average Percentage: %.2f\n", average_percentage);
+            printf("Grade: %c\n", calculateGrade(average_percentage));
+            return;
+        }
+    }
+    printf("Student not found.\n");
+}
